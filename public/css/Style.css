@@ -1,0 +1,296 @@
+
+:root {
+    --brown: #531F09;
+    --cream: #FAF7F1;
+    --orange: #E9A66A;
+    --text: #29231F;
+    --muted: #746C65;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+}
+
+/* Navigation */
+.navbar {
+    background: var(--brown);
+    padding: 19px 0;
+}
+
+.brand {
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.brand span {
+    color: var(--orange);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: var(--orange);
+}
+
+.nav-button {
+    display: inline-block;
+    margin-left: 25px;
+    padding: 10px 19px;
+    background: white;
+    color: var(--brown);
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-button:hover {
+    background: var(--orange);
+    color: var(--brown);
+}
+
+/* Hero section */
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 75px 0;
+    overflow: hidden;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--brown);
+    background: #F0E5D7;
+    padding: 8px 13px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.12;
+    letter-spacing: -2.5px;
+    font-weight: 800;
+    margin: 25px 0 20px;
+}
+
+.hero h1 span {
+    color: #96502C;
+}
+
+.hero-description {
+    max-width: 460px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.primary-button {
+    display: inline-block;
+    background: var(--brown);
+    color: white;
+    text-decoration: none;
+    padding: 15px 23px;
+    border-radius: 7px;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.primary-button:hover {
+    background: #713414;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.secondary-link {
+    color: var(--brown);
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+/* Tutor matching preview */
+.hero-art {
+    position: relative;
+    min-height: 410px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.art-circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: #EBD7C2;
+    position: absolute;
+}
+
+.learning-card {
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(83, 31, 9, 0.12);
+    transform: rotate(-2deg);
+}
+
+.card-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 1px;
+}
+
+.tutor-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #F0D8C2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.match-score {
+    background: #E9F3E6;
+    color: #386A35;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: #F5EEE6;
+    color: var(--brown);
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin: 5px 3px 0 0;
+    font-size: 12px;
+}
+
+.floating-note {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 40px;
+    background: var(--brown);
+    color: white;
+    padding: 15px 19px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(83, 31, 9, 0.2);
+    font-size: 13px;
+}
+
+/* Benefits */
+.benefits {
+    padding: 35px 0 75px;
+}
+
+.benefit {
+    height: 100%;
+    padding: 23px;
+    border-top: 1px solid #DCCDBE;
+}
+
+.benefit-number {
+    color: #96502C;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.benefit h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 17px;
+}
+
+.benefit p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    background: var(--brown);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 25px 0;
+    font-size: 13px;
+}
+
+footer .brand {
+    font-size: 20px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 767px) {
+    .hero {
+        padding: 55px 0 30px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .hero-art {
+        min-height: 370px;
+        margin-top: 20px;
+    }
+
+    .art-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .learning-card {
+        width: 270px;
+        padding: 24px;
+    }
+
+    .floating-note {
+        right: 0;
+        bottom: 15px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+
+    .nav-button {
+        margin: 10px 0 0;
+    }
+
+    .secondary-link {
+        display: inline-block;
+        margin: 15px 0 0;
+    }
+}

@@ -1,0 +1,440 @@
+:root {
+            --brown: #531f09;
+            --brown-light: #783817;
+            --orange: #e9a66a;
+            --page: #f8f5f2;
+            --text: #33251f;
+            --muted: #817168;
+            --border: #eadfd7;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--page);
+            color: var(--text);
+            font-family: Arial, sans-serif;
+        }
+
+        .layout {
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            inset: 0 auto 0 0;
+            width: 245px;
+            padding: 25px 17px;
+            background: var(--brown);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 8px 30px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            background: var(--orange);
+            color: var(--brown);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .brand h2 {
+            font-size: 21px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .brand small {
+            color: #e8c5ac;
+            font-size: 11px;
+        }
+
+        .nav-label {
+            color: #d9b9a5;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            padding: 0 12px;
+            margin: 8px 0 12px;
+            text-transform: uppercase;
+        }
+
+        .side-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #f7eae1;
+            text-decoration: none;
+            padding: 13px 14px;
+            border-radius: 9px;
+            margin-bottom: 7px;
+            font-size: 14px;
+            transition: background .2s;
+        }
+
+        .side-link:hover,
+        .side-link.active {
+            background: var(--brown-light);
+            color: white;
+        }
+
+        .side-link.active {
+            border-left: 3px solid var(--orange);
+        }
+
+        .side-icon {
+            width: 22px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+            padding: 18px 12px 0;
+            border-top: 1px solid #79503d;
+            color: #e8c5ac;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .sidebar-footer strong {
+            display: block;
+            color: white;
+            font-size: 14px;
+        }
+
+        .logout-btn {
+            width: 100%;
+            text-align: left;
+            border: 0;
+            background: transparent;
+            color: #f7eae1;
+            padding: 13px 14px;
+            border-radius: 9px;
+        }
+
+        .logout-btn:hover {
+            background: var(--brown-light);
+        }
+
+        /* Main content */
+        .main {
+            margin-left: 245px;
+            min-width: 0;
+        }
+
+        .topbar {
+            min-height: 72px;
+            padding: 15px 32px;
+            background: white;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .topbar-title {
+            font-weight: 700;
+            color: var(--brown);
+        }
+
+        .user-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .user-role {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .content {
+            padding: 32px;
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        /* Welcome banner */
+        .welcome {
+            padding: 28px;
+            border-radius: 15px;
+            background: var(--brown);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .welcome::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            right: -40px;
+            top: -65px;
+            border: 28px solid rgba(233, 166, 106, .2);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .welcome h1 {
+            font-size: 27px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .welcome p {
+            color: #f0d9c9;
+            margin-bottom: 0;
+        }
+
+        /* Cards */
+        .panel {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            overflow: hidden;
+            margin-bottom: 22px;
+        }
+
+        .panel-header {
+            padding: 22px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 7px;
+            color: var(--brown);
+        }
+
+        .panel-description {
+            color: var(--muted);
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .panel-body {
+            padding: 24px;
+        }
+
+        /* Profile photo */
+        .photo-section {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+
+        .photo-preview {
+            width: 110px;
+            height: 110px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f0e4da;
+        }
+
+        .photo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 110px;
+            height: 110px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: var(--brown);
+            color: white;
+            font-size: 38px;
+            font-weight: bold;
+        }
+
+        .photo-controls {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        /* Form fields */
+        .form-label {
+            display: block;
+            color: var(--brown);
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .form-control,
+        .form-select {
+            padding: 11px 13px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--orange);
+            box-shadow: 0 0 0 3px rgba(233, 166, 106, .2);
+        }
+
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .field-hint {
+            display: block;
+            margin-top: 7px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .field-error {
+            color: #842029;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        /* Buttons */
+        .btn-orange {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--brown);
+            font-weight: 700;
+            text-decoration: none;
+            padding: 11px 17px;
+            border-radius: 8px;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .btn-orange:hover {
+            background: #f3bd8a;
+            color: var(--brown);
+        }
+
+        .btn-secondary-custom {
+            display: inline-block;
+            background: white;
+            color: var(--brown);
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary-custom:hover {
+            background: #f8f0e9;
+            color: var(--brown);
+        }
+
+        .form-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 20px;
+            border-top: 1px solid #f0e8e2;
+        }
+
+        .alert {
+            border-radius: 9px;
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .sidebar {
+                width: 210px;
+            }
+
+            .main {
+                margin-left: 210px;
+            }
+
+            .content {
+                padding: 22px;
+            }
+
+            .topbar {
+                padding: 15px 22px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                min-height: auto;
+            }
+
+            .brand {
+                padding-bottom: 15px;
+            }
+
+            .sidebar-footer {
+                margin-top: 15px;
+            }
+
+            .main {
+                margin-left: 0;
+            }
+
+            .content {
+                padding: 17px;
+            }
+
+            .topbar {
+                padding: 15px 17px;
+            }
+
+            .welcome {
+                padding: 22px;
+            }
+
+            .welcome h1 {
+                font-size: 23px;
+            }
+
+            .panel-body {
+                padding: 19px;
+            }
+
+            .photo-section {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .photo-controls {
+                width: 100%;
+                min-width: 0;
+            }
+        }
